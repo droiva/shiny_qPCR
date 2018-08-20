@@ -11,7 +11,6 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 library(ggrepel)
-library(plotly)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -205,7 +204,6 @@ server <- function(input, output) {
       filename = "expressionPlot.png",
       
       content = function(file) {
-        4
         ggsave(filename = file,plot = expressionPlot,device="png",width = 50,height = 25, units = "cm", dpi=300)
       }
     )
